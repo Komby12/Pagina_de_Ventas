@@ -1,0 +1,111 @@
+
+
+
+.bodycolor{
+
+background-color: #26416b;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.usuario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.contra-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.label-usuario {
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.label-contra {
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.input-usuario {
+    border-radius: 12px;
+    border: none;
+    outline-style: none;
+    width: 15rem;
+}
+
+.input-contra {
+    width: 15rem;
+    border-radius: 12px;
+    border: none;
+    outline-style: none;
+}
+
+.button-inicio-sesion:hover {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.button-registrarse:hover {
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+.button-registrarse{
+    margin-top: 1rem;
+    border-radius: 12px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 0rem;
+    text-decoration: none;
+    height: 1.5rem;
+    font-weight: bold;
+    width: 15rem;
+}
+
+.button-inicio-sesion {
+    margin-top: 1rem;
+    border-radius: 12px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: 0rem;
+    text-decoration: none;
+    height: 1.5rem;
+    font-weight: bold;
+    width: 15rem;
+}
+
+.icono-perfil {
+    width: 15rem;
+    height: 15rem;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    min-height: 2rem;
+    background-color: #232F3E;
+    
+    border-top: 1px solid rgba(50, 50, 50, 0.3);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
