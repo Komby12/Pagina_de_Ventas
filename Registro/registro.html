@@ -7,6 +7,14 @@
         <h2>Crear cuenta</h2>
     </div>
     <form id="form" class="form">
+
+        <div class="form-control">
+            <label class="titulo-control">Imagen de perfil</label>
+            <input class="control-imagen-perfil" id="imagen-perfil" accept="image/png, image/jpg, image/jpeg" name="imagen-perfil" type="file" />
+            <label id="imagen-perfil-fake" class="input-file__btn"  for="imagen-perfil">Selecciona una imagen de perfil</label>
+            <img id="imagen-perfil-prev" class="texto-perfil-fake" src="" alt="Imagen prev">
+        </div>
+
         <div class="form-control">
             <label for="username">Usuario</label>
             <input type="text" placeholder="Usuario" id="username" />
@@ -21,6 +29,12 @@
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
+
+        <div class="form-control">
+            <label class="titulo-control" for="fecha-nacimiento">Fecha nacimiento</label>
+            <input required class="control" id="fecha-nacimiento" name="fecha-nacimiento" type="date" />
+            <label id="formato-aviso-fecha-nacimiento"></label>
+        </div>
         <div class="form-control">
             <label for="password">Password</label>
             <input type="password" placeholder="Password" id="password"/>
@@ -28,12 +42,22 @@
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
+        
         <div class="form-control">
             <label for="password2">Repetir password</label>
             <input type="password" placeholder="Password dos" id="password2"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
+        </div>
+        <div>
+            <label  class="form-control"  for="Preferencias">Rol:</label>
+            <select Name="Nivel Aademico" Size="Number_of_options">  
+                <option> comprador </option>  
+                <option> vendedor</option>  
+                
+              </select>
+
         </div>
         <button>Submit</button>
     </form>

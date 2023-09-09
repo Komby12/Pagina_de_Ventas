@@ -3,6 +3,7 @@ const usuario = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+const fechaNa = document.getElementById('fechaNa');
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
@@ -16,9 +17,16 @@ function checkInputs() {
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
 	const password2Value = password2.value.trim();
-	
+	const fechaNaValue =  fechaNa.value.trim();
+
 	if(usuarioValue === '') {
 		setErrorFor(usuario, 'No se puede dejar el usuario en blanco');
+	} else {
+		setSuccessFor(usuario);
+	}
+
+    if(fechaNa=== '') {
+		setErrorFor(usuario, 'Se debe poner fecha de nacimiento');
 	} else {
 		setSuccessFor(usuario);
 	}
@@ -61,3 +69,33 @@ function setSuccessFor(input) {
 function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+//----imagen 
+$("#imagen-perfil").ready(function () {
+    $("#imagen-perfil-fake").css({"border": "0.1rem solid red"});
+    banderaImagen = false;
+});
+
+$("#imagen-perfil").change(function () {
+    const archivo = $(this).get(0).files[0];
+
+    var allowedExtensions = /(.jpg|.jpeg|.png)$/i;
+    if (!allowedExtensions.exec(archivo.name)) {
+        alert("Extension de imagen no permitida");
+        $("#imagen-perfil-fake").css({"border": "0.1rem solid red"});
+        $("#imagen-perfil-prev").attr("src", "");
+        banderaImagen = false;
+        return;
+    }
+
+    if (archivo == undefined || archivo == null) {
+        $("#imagen-perfil-prev").attr("src", "");
+        $("#imagen-perfil-fake").css({"border": "0.1rem solid red"});
+        banderaImagen = false;
+        return;
+    }
+    const objectURL = URL.createObjectURL(archivo);
+    $("#imagen-perfil-prev").attr("src", objectURL);
+    $("#imagen-perfil-fake").css({"border": "0.1rem solid lightgreen"});
+    banderaImagen = true;
+});
