@@ -3,7 +3,7 @@ const usuario = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
-const fechaNa = document.getElementById('fechaNa');
+
 
 form.addEventListener('submit', e => {
 	e.preventDefault();
@@ -17,7 +17,6 @@ function checkInputs() {
 	const emailValue = email.value.trim();
 	const passwordValue = password.value.trim();
 	const password2Value = password2.value.trim();
-	const fechaNaValue =  fechaNa.value.trim();
 
 	if(usuarioValue === '') {
 		setErrorFor(usuario, 'No se puede dejar el usuario en blanco');
@@ -25,12 +24,7 @@ function checkInputs() {
 		setSuccessFor(usuario);
 	}
 
-    if(fechaNa=== '') {
-		setErrorFor(usuario, 'Se debe poner fecha de nacimiento');
-	} else {
-		setSuccessFor(usuario);
-	}
-	
+   
 	if(emailValue === '') {
 		setErrorFor(email, 'No puede dejar el email en blanco');
 	} else if (!isEmail(emailValue)) {

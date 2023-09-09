@@ -4,6 +4,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
+
 form.addEventListener('submit', e => {
 	e.preventDefault();
 	
@@ -17,11 +18,13 @@ function checkInputs() {
 	const passwordValue = password.value.trim();
 	const password2Value = password2.value.trim();
 	
+	
 	if(usuarioValue === '') {
 		setErrorFor(usuario, 'No se puede dejar el usuario en blanco');
 	} else {
 		setSuccessFor(usuario);
 	}
+
 	
 	if(emailValue === '') {
 		setErrorFor(email, 'No puede dejar el email en blanco');
