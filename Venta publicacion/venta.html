@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <script src="../../jquery-3.6.0.min.js"></script>
+        <script src="../../all.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./publicacion.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../Header/header.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../../bootstrap.min.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../../all.min.css" media="screen" />
+        <link rel="icon" type="image/x-icon" href="../../resources/logo.png">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Publicacion</title>
+    </head>
+    <body style="background-color:#f9d7be">
+        <header class="header-container" style="background-color:#69a694">
+            <img id="logo" class="logo" src="../../resources/logo.png">
+            <div class="perfil-region">
+                <label id="nombre" class="nombre-estilo">Desconocido</label>
+                <div id="imagen-perfil" class="imagen-perfil"></div>
+                <div class="dropdown">
+                    <i class="icono-elipsis fa-solid fa-ellipsis-vertical" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="../AdministrarPublicaciones/administrar-publicaciones.html">
+                                Administrar publicaciones
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Perfil</a></li>
+                    </ul>
+                </div>
+                <button id="button-cerrarSession" class="button-inicio">Cerrar tu sesión</button>
+            </div>
+        </header>
+
+        <div class="cuerpo-publicacion container-fluid">
+            <form id="form-publicacion" class="input-group d-flex flex-column" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-5">
+                        <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Añade un titulo">
+                    </div>
+                    <div class="col-5">
+                        <input type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Añade una descipción">
+                    </div>
+                    <div class="col-2 d-flex align-items-center justify-content-center">
+                        <button type="submit" class="w-100 btn btn-primary">Publicar</button>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-10">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <input class="imagen form-control form-control-sm" id="imagen" accept="image/png, image/jpg, image/jpeg" name="imagen" type="file" />
+                            <label id="imagen-fake" class="input-file__btn"  for="imagen">Añadir Foto</label>
+                            <div class="img-container mb-2">
+                                <img id="imagen-prev" class="texto-fake" src="" alt="Imagen prev">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 text-center">
+                        <label>Categorias</label>
+                        <select 
+                            id="tags" 
+                            data-placeholder="Begin typing a name to filter..." 
+                            multiple="multiple" class="w-100" 
+                            name="tags">
+                            
+                        </select>
+                       
+                    </div>
+                </div>
+                <textarea class="texto mt-2" id="texto" name="texto"></textarea>
+            </form>
+        </div>
+        
+                <footer style = "background-color: #19554b;">Copyright &copy; 2023 - Jesús Julián Cerda Sandoval - Alejandro Rodriguéz Chávez
+        
+                        <div class="col p-2 d-flex flex-column position-static">
+
+                </div>
+        </footer>
+        
+        
+    </body>
+    <script src="./publicacion.js"></script>
+    <script src="../../bootstrap.bundle.min.js" ></script>
+</html>

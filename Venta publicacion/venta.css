@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+:root{
+    --colorBarra:#0c2230;
+    --colorTexto: #f2f2f2;
+    --colorFondoBusqueda: #242526;
+    --colorInput: #f2f2f2;
+    --colorTextoInput: #010718;
+    --colorLupaInput: #153f59;
+    --colorFondoMain: #fff;
+    --colorTextoMain: #111;
+    --colorFondoNota: #E9E9E9;
+    --colorFondoPaginacion: #6BBBFE;
+    --bodyblackcolor: rgb(13, 23, 68);
+    --textgray: rgb(196, 195, 195);
+    --green: rgb(49, 137, 143); 
+    --gray: rgb(154, 161, 159);
+    --astronaut: #254d6b;
+    --hawkes-blue: #d8eefb;
+    --cornflower: #82c8e4;
+    --sail: #a4def5;
+    --shakespeare: #52accc;
+    --bermuda-gray: #6e8da4;
+    --hoki: #6684a2;
+    --rock-blue: #a0b4cc;
+    --casper: #b4c4d4;
+    --blue: rgb(90, 100, 241);
+--purple: rgb(108, 2, 247); 
+--green: rgb(49, 137, 143); 
+--gray: rgb(154, 161, 159);
+--blue: rgb(90, 100, 241);
+--purple: rgb(108, 2, 247); 
+--textB: white; 
+--textgray: rgb(196, 195, 195);
+--bodyblackcolor: rgb(13, 23, 68);
+--glasscolor: rgb(48, 48, 48);
+--border-color:rgb(104, 104, 104); 
+--blur: blur (10px); 
+--buttoncolor: rgb(80, 80, 80); 
+}
+
+
+.imagen-perfil-publicacion {
+    background-image: url("../../resources/perfil-vacio.png");
+    width: 5rem;
+    height: 5rem; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+footer {
+    text-align: center;
+    color: white;
+    min-height: 2rem;
+    
+    
+color: white;
+    border-top: 1px solid rgba(50, 50, 50, 0.3);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.cuerpo-publicacion {
+    margin-top: 10rem;
+    background-color: #69a694;
+    z-index: 15!important;
+}
+
+.imagen{
+    display: none!important;
+}
+
+.input-file__btn {
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 8rem;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    height: 2rem;
+    font-size: 0.8rem;
+}
+
+.input-file__btn:hover {
+    background-color: rgba(31, 31, 31, 0.5);
+}
+
+.img-container {
+    max-width: 100%;
+    max-height: 20vh;
+}
+
+.texto-fake {
+    max-width: 100%;
+    height: 20vh;
+    margin-top: 1rem;
+}
+
+.texto {
+    width: 80%;
+    height: 20vh;
+}
+

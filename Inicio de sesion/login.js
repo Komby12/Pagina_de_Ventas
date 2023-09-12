@@ -1,41 +1,47 @@
-$.ajax({
-    type: 'GET',
-    dataType: "json",
-    url: "../../RevisarSesion"
-}).done(function (data, textEstado, jqXHR) {
-    if (data.resultado) {
-        window.location.href = "../../principal.html";
-    }
-}).fail(function (jqXHR, textEstado) {
-    console.log("La solicitud no se pudo realizar error: " + textEstado);
+const form = document.getElementById('form');
+const usuario = document.getElementById('username');
+const password = document.getElementById('password');
+
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	
+	checkInputs();
 });
 
-$(document).ready(function () {
-    $("#button-registrarse").click(function () {
-        location.href = "../Registro/registro.html";
-    });
+function checkInputs() {
+	// trim to remove the whitespaces
+	const usuarioValue = usuario.value.trim();
+		const passwordValue = password.value.trim();
+	
+	if(usuarioValue === '') {
+		setErrorFor(usuario, 'No se puede dejar el usuario en blanco');
+	} else {
+		setSuccessFor(usuario);
+	}
 
-    $("#logo").click(function () {
-        location.href = "../../principal.html";
-    });
+   
+	
+	
+	if(passwordValue === '') {
+		setErrorFor(password, 'Password no debe ingresar en blanco.');
+	} else {
+		setSuccessFor(password);
+	}
+	
+	
+}
 
-    $("#Login").submit(function (event) {
-        event.preventDefault();
-        $.ajax({
-            data: $(this).serialize(),
-            type: 'POST',
-            dataType: "json",
-            url: "../../Login"
-        }).done(function (data, textEstado, jqXHR) {
-            if (data.resultado) {
-                console.log(data.resultado);
-                window.localStorage.setItem('userName', data.resultado);
-                window.location.href = "../../principal.html";
-            } else {
-                alert("Credenciales incorrectas");
-            }
-        }).fail(function (jqXHR, textEstado) {
-            console.log("La solicitud no se pudo realizar error: " + textEstado);
-        });
-    });
-});
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
+}
+
+

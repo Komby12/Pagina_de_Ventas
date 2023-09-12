@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-
     <head>
         <script src="../../jquery-3.6.0.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="login.css" media="screen" />
-        <link rel="stylesheet" type="text/css" href="../Header/header.css" media="screen" />
+       
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
     </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="../Registro/registro.css" media="screen" />
+<div class="container">
+    <div class="header">
+        <h2>Iniciar sesion</h2>
+    </div>
+    <form id="form" class="form">
 
-    <body class="bodycolor">
-        <header class="header-container" >
-            
-        </header>
-        <form id="Login" class="login-container" >
-            <div class="icono-perfil-container">
-                <img class="icono-perfil" src="../../resources/usuario.png">
-            </div>
-            <div class="usuario-container">
-                <label class="label-usuario" for="usuario">Usuario:</label>
-                <input class="input-usuario" type="text" id="usuario" name="usuario">
-            </div>
-            <div class="contra-container">
-                <label class="label-contra" for="contraseña">Contraseña:</label>
-                <input class="input-contra" type="password" id="contraseña" name="contraseña">
-            </div>
-            <button class="button-inicio-sesion" type="submit">Iniciar sesion</button>
-            <div>
-                <button id="button-registrarse" class="button-registrarse" >Registrarse</button>
-            </div>  
-        </form>
-                
+        <div class="icono-perfil-container">
+            <img class="icono-perfil" src="../../resources/usuario.png">
+        </div>
        
-                <footer class="FOOTERCOLOR">Copyright &copy; 2023 - Juan Carlos García Vazquez - Mauricio A Rodriguéz Chávez
+        <div class="form-control">
+            <label for="username">Usuario</label>
+            <input type="text" placeholder="Usuario" id="username" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+                
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" id="password"/>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
         
-                        <div class="col p-2 d-flex flex-column position-static">
+        
+        <button>Iniciar Sesion</button>
+        <a href="/Registro/registro.html">No tienes cuenta? Registrarte aqui</a>
 
-                </div>
-        </footer>
-        
-        
-        <script src="./login.js"></script>
-    </body>
+    </form>
+</div>
+
+
+<script src="login.js"></script>
+</body>
+
+
 </html>
