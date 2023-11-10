@@ -6,19 +6,19 @@
     <div class="header">
         <h2>Crear cuenta</h2>
     </div>
-    <form id="form" class="form">
+    <form id="form" class="form" action="../Registro/registerApi.php" method="post">
 
        
         <div class="form-control">
             <label for="username">Usuario</label>
-            <input type="text" placeholder="Usuario" id="username" />
+            <input type="text" placeholder="Usuario" id="username" name="username"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
             <label for="email">Email</label>
-            <input type="email" placeholder="Ejemplo@gmail.com" id="email" />
+            <input type="email" placeholder="Ejemplo@gmail.com" id="email" name="email"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -27,7 +27,7 @@
         
         <div class="form-control">
             <label for="password">Password</label>
-            <input type="password" placeholder="Password" id="password"/>
+            <input type="password" placeholder="Password" id="password" name="password"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
@@ -62,7 +62,7 @@
               </select>
 
         </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </div>
 <script src="./registro.js"></script>
