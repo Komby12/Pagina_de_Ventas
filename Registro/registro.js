@@ -3,10 +3,24 @@ const usuario = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
+let formIsValid = false;
+
+
 form.addEventListener('submit', e => {
+	console.log("Form Not Valid",formIsValid)
+	if(formIsValid){
+		return;
+	}
+
 	e.preventDefault();
 	
-	checkInputs();
+	formIsValid = checkInputs();
+
+	if(formIsValid){
+		$("#submitBtn").trigger("click");
+	}
+
+
 });
 function checkInputs() {
 	// trim to remove the whitespaces
@@ -74,11 +88,11 @@ function isEmail(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 //----imagen 
-$("#imagen-perfil").ready(function () {
+/*$("#imagen-perfil").ready(function () {
     $("#imagen-perfil-fake").css({"border": "0.1rem solid red"});
     banderaImagen = false;
-});
-$("#imagen-perfil").change(function () {
+});*/
+/*$("#imagen-perfil").change(function () {
     const archivo = $(this).get(0).files[0];
     var allowedExtensions = /(.jpg|.jpeg|.png)$/i;
     if (!allowedExtensions.exec(archivo.name)) {
@@ -98,4 +112,4 @@ $("#imagen-perfil").change(function () {
     $("#imagen-perfil-prev").attr("src", objectURL);
     $("#imagen-perfil-fake").css({"border": "0.1rem solid lightgreen"});
     banderaImagen = true;
-});
+});*/
