@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="./Css/Catg.css">
+	<link rel="stylesheet" href="./Css/BusqAdvan.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-	<title>Chat</title>
+	<title>Busqueda</title>
 </head>
 <body>
 	<nav class="menu" id="menu">
@@ -39,9 +39,11 @@
 				  <i class="fas fa-search icon"></i>
 				</div>
 			  </div>
-
+             
+              
 			<div class="enlaces">
 				<a href="./Perfil.html" target="_self">Perfil</a>
+                <a href="./BusqAdvan.html" target="_self">Busqueda advanzada</a>
 				<a href="./Categorias.html" target="_self">Alta de Categorias</a>
 				<a href="./AprobarProductos.html" target="_self">Aprobar Productos</a>
 				<a href="./Cotizacion.html" target="_self">Cotizacion</a>
@@ -296,24 +298,110 @@
 			</div>
 		</div>
 	</nav>
+    
+    <div class="container">
+        <div class="header">
+            <h2>Busqueda</h2>
+        </div>
 
-	<main class="contenedor">
-        <article>
-            <div class="chat-container">
-                <div class="chat">
-                    <div class="message received">Hola, ¿cómo estás?</div>
-                    <div class="message sent">¡Hola! Estoy bien, ¿y tú?</div>
-                    <!-- Puedes agregar más mensajes aquí -->
-                </div>
-                <div class="input-container">
-                    <input type="text" id="message-input" placeholder="Escribe tu mensaje...">
-                    <button id="send-button">Enviar</button>
-                </div>
+        <div>
+        <form id="form" class="formb">
+        
+           
+                     
+            <div class="form-control">
+                <label for="Descripcion">Nombre</label>
+                <input type="text" placeholder="¿Que buscas?" id="Nombre"/>
+                
             </div>
-        </article>
-	</main>
-	
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
-	<script src="./Js/chating.js"></script>
-</body>
-</html>
+
+            <div class="form-control">
+                <label for="Descripcion">Precio</label>
+                <input type="number" placeholder="0.00" id="Precio"/>
+               
+            </div>
+            
+            <div class="form-control">
+                <label for="Descripcion">Nombre del vendedor</label>
+                <input type="text" placeholder="Vendedor" id="Despcripcion"/>
+                
+            </div>
+        
+        
+            <button class="botonbusqueda">Buscar</button>
+            
+        
+        </form>
+            
+
+        </div>
+
+    
+      </div>
+
+
+      <div>
+
+        <form id="Busq" class="Busq">
+        <div class="Result">
+            <h2 class="Titulo">Resultados encontrados:</h2>
+       </div>
+         <div class="contenedor1">
+       
+           <div class="colum1">
+               <h2>Productos</h2>
+
+               <p>NIKE TERRA KING</p>
+
+               <p>NIKE BLAZER 97</p>
+           </div>
+
+           <div class="colum2">
+            <h2>vendedor</h2>
+            
+            <a href="./PerfilVen.html" target="_self">Vendedor1</a>
+            
+            <a href="./PerfilVen.html" target="_self">Vendedor1</a>
+
+        </div>
+
+           <div class="colum3">
+            <h2>Categoria</h2>
+
+            <p>Deportes</p>
+            <p>Deportes</p>
+
+
+            
+        </div>
+
+        <div class="colum4">
+            <h2>Evaluacion</h2>
+
+            <p>$12.00</p>
+            <p>$15.00</p>
+        </div>
+
+
+        <div class="colum5">
+            <h2>Precio</h2>
+
+            <p>$1.800</p>
+            <p>$130</p>
+        </div>
+
+
+    </div>
+                
+            </form>
+
+
+      </div>
+       
+
+
+
+
+    </body>
+
+    </html>

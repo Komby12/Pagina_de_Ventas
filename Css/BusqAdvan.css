@@ -530,3 +530,59 @@ main article {
   }
 
 
+  /* ------------------------- */
+/* Busqueda*/
+/* ------------------------- */
+
+.formb {
+    background-color: #fff;;
+	padding: 30px 40px;	
+}
+
+.contenedor1{
+	display: flex;
+   justify-content: center;
+   
+
+}
+
+.colum1{
+    padding: 20px 28px;
+    margin: 20px;
+}
+
+.colum2{
+    padding: 20px 28px;
+    margin: 20px;
+}
+.colum3{
+    padding: 20px 28px;
+    margin: 20px;
+}
+.colum4{
+    padding: 20px 28px;
+    margin: 20px;
+}
+.colum5{
+    padding: 20px 28px;
+    margin: 20px;
+}
+
+.botonbusqueda{
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    
+    background: #33789C;
+        color: white;
+    font-size: 18px;
+    
+
+}
+
+.Busq{
+    background-color: #54BFCD ;
+	padding: 30px 40px;	
+}
+
+
