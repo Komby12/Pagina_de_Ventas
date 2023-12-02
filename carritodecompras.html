@@ -304,34 +304,47 @@
         <article>
         <div id="carrito" style="text-align: center; text-transform: uppercase;">
             <h2>CARRITO</h2>
-            <ul class="lista-productos">
-				<li>Producto 1</li>
-				<li>Producto 2</li>
-				<li>Producto 3</li>
-			</ul>
-		</div>
-		<p>En compra: $<span id="precio"></span></p>
-		<button id="btn-compra" onclick="realizarCompra()">Compra</button>
-		<button id="btn-eliminar" onclick="eliminarProducto()">Eliminar</button>
+			<ul id="lista-productos">
+                <li class="producto">
+                    <input type="checkbox" name="producto-1" id="producto-1">
+                    <img src="./img/imagenpendiente" alt="Producto-1">
+                    <p>NOMBRE</p>
+                    <p>$</p>
+                </li>
+
+                <li class="producto">
+                    <input type="checkbox" name="producto-2" id="producto-2">
+                    <img src="./img/imagenpendiente" alt="Producto-2">
+                    <p>NOMBRE</p>
+                    <p>$</p>
+                </li>
+            </ul>
+
+            <button id="btn-compra" onclick="redireccionar()">Compra</button>
+            <button id="btn-eliminar" onclick="eliminarProducto()">Eliminar</button>
+        </div>
         </article>
 	</main>
 	
-	
 	<script>
-        function realizarCompra() {
-            // Aquí puedes agregar la lógica para realizar la compra
-            // Por ejemplo, actualiza el precio total y realiza alguna acción adicional.
-            var precioTotal = 100.00; // Cambia este valor según tu lógica de precios
-            document.getElementById("precio").textContent = precioTotal.toFixed(2);
-        }
-    
-        function eliminarProducto() {
-            // Aquí puedes agregar la lógica para eliminar el producto
-            // Por ejemplo, quitar el producto del carrito y actualizar el precio total.
-            var precioTotal = 0.00; // Cambia este valor según tu lógica de eliminación
-            document.getElementById("precio").textContent = precioTotal.toFixed(2);
-        }
-    </script>
+		function redireccionar() {
+			window.location.href = "metodopago.html";
+		}
+	
+		function eliminarProducto() {
+			// Obtener el producto seleccionado
+			var productoSeleccionado = document.querySelector("input[name='producto-1']:checked");
+	
+			// Si no hay producto seleccionado, no hacer nada
+			if (!productoSeleccionado) {
+				return;
+			}
+	
+			// Eliminar el producto de la lista
+			var listaProductos = document.querySelector("#lista-productos");
+			listaProductos.removeChild(productoSeleccionado.parentNode);
+		}
+	</script>
 	
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
 	<script src="./Js/compras.js"></script>
